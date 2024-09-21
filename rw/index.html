@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Pizza Order</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .pizza-options {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .pizza-item {
+            width: 48%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .pizza-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Order Your Pizza</h1>
+        <form action="#" method="POST">
+
+            <!-- Pizza Name with Image -->
+            <label for="pizza-name">Select Pizza Name:</label>
+            <div class="pizza-options">
+                <div class="pizza-item">
+                    <img src="mp.webp" alt="Margherita">
+                    <input type="radio" id="margherita" name="pizza-name" value="Margherita" required>
+                    <label for="margherita">Margherita</label>
+                </div>
+                <div class="pizza-item">
+                    <img src="mp1.jpeg" alt="Pepperoni">
+                    <input type="radio" id="pepperoni" name="pizza-name" value="Pepperoni" required>
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+                <div class="pizza-item">
+                    <img src="mp2.jpg" alt="BBQ Chicken">
+                    <input type="radio" id="bbq-chicken" name="pizza-name" value="BBQ Chicken" required>
+                    <label for="bbq-chicken">BBQ Chicken</label>
+                </div>
+                <div class="pizza-item">
+                    <img src="mp3.webp" alt="Veggie Delight">
+                    <input type="radio" id="veggie-delight" name="pizza-name" value="Veggie Delight" required>
+                    <label for="veggie-delight">Veggie Delight</label>
+                </div>
+            </div>
+
+            <!-- Pizza Type -->
+            <label for="pizza-type">Select Pizza Type:</label>
+            <select id="pizza-type" name="pizza-type" required>
+                <option value="" disabled selected>Select Type</option>
+                <option value="Regular">Regular</option>
+                <option value="Gluten-Free">Gluten-Free</option>
+                <option value="Thin Crust">Thin Crust</option>
+                <option value="Cheese Burst">Cheese Burst</option>
+            </select>
+
+            <!-- Pizza Toppings -->
+            <label for="toppings">Select Toppings:</label>
+            <input type="checkbox" id="pepperoni" name="topping" value="Pepperoni"> Pepperoni<br>
+            <input type="checkbox" id="mushrooms" name="topping" value="Mushrooms"> Mushrooms<br>
+            <input type="checkbox" id="onions" name="topping" value="Onions"> Onions<br>
+            <input type="checkbox" id="sausage" name="topping" value="Sausage"> Sausage<br>
+            <input type="checkbox" id="bacon" name="topping" value="Bacon"> Bacon<br>
+
+            <!-- Pizza Size -->
+            <label for="pizza-size">Select Pizza Size:</label>
+            <input type="radio" id="small" name="pizza-size" value="Small" required> Small<br>
+            <input type="radio" id="medium" name="pizza-size" value="Medium"> Medium<br>
+            <input type="radio" id="large" name="pizza-size" value="Large"> Large<br>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Place Order</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
